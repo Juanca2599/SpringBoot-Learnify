@@ -7,9 +7,9 @@ public class Teacher {
     public Teacher(){
     }
 
-    public Teacher(Integer idTeacher, String especiality) {
+    public Teacher(Integer idTeacher, String speciality) {
         this.idTeacher = idTeacher;
-        this.speciality = especiality;
+        this.speciality = speciality;
     }
 
     public Integer getIdTeacher() {
