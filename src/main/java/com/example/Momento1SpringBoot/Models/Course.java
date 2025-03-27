@@ -1,5 +1,6 @@
 package com.example.Momento1SpringBoot.Models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,4 +13,12 @@ public class Course {
 
     @Column (name = "nombre", length = 100, unique = false, nullable = false)
     private String name;
+
+    // Creando realcion  ( Muchosa uno)
+
+    @ManyToOne
+    @JoinColumn(name = "fk_docente", referencedColumnName = "id")
+    @JsonBackReference
+    private Teacher teacher;
+
 }
